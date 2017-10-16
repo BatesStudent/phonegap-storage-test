@@ -11,13 +11,23 @@ document.addEventListener("deviceready", onDeviceReady, false);
     function onDeviceReady() {
 	    
 	console.log("device ready");
-        storeItem("feeling", "tired");
+        var person= {
+		"firstName": "Homer",
+  		"lastName": "Simpson",
+ 		"address": {
+    			"streetAddress": "742 Evergreen Terrace",
+    			"city": "Springfield",
+    			"state": "?"
+		}
+	}
+
+        storeItem("person", JSON.stringify(person));
         storeItem("hair", "brown");
         storeItem("beard", "messy");
         storeItem("weather", "weird");
         storeItem("date", "16th oct 2017");
         
-        document.getElementById("storage1").innerHTML = "Feeling: " + getItem("feeling");
+        document.getElementById("storage1").innerHTML = "Feeling: " + JSON.parse(getItem("person"));
         document.getElementById("storage2").innerHTML = "Storage items: " + window.localStorage.length;
     }
 
