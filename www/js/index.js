@@ -27,7 +27,7 @@ document.addEventListener("deviceready", onDeviceReady, false);
         storeItem("weather", "weird");
         storeItem("date", "16th oct 2017");
         
-        document.getElementById("storage1").innerHTML = "Feeling: " + JSON.parse(getItem("person"));
+        document.getElementById("storage1").innerHTML = "First name: " + JSON.parse(getItem("person")).firstName;
         document.getElementById("storage2").innerHTML = "Storage items: " + window.localStorage.length;
     }
 
