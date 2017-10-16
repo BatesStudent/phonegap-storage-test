@@ -18,6 +18,7 @@ document.addEventListener("deviceready", onDeviceReady, false);
         storeItem("date", "16th oct 2017");
         
         document.getElementById("storage1").innerHTML = "Feeling: " + getItem("feeling");
+        document.getElementById("storage2").innerHTML = "Storage items: " + window.localStorage.length;
     }
 
 
@@ -31,7 +32,7 @@ document.addEventListener("deviceready", onDeviceReady, false);
     }
 
     function storeItem(key, item){
-        window.localStorage.setItem( key, value );
+        window.localStorage.setItem( key, item );
     }
 
     function getItem(key){
